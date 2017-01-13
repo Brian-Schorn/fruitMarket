@@ -158,6 +158,13 @@ function endGame () {
     }
   });
   if(totalCash > 100){
+    $('#totalCash').css('color', 'green');
+  }else if (totalCash < 100){
+    $('#totalCash').css('color', 'red');
+  }else{
+    $('#totalCash').css('color', 'black');
+  }
+  if(totalCash > 100){
     $('#messages').fadeIn(0);
     $('#messages').text("Congratulations you made a profit of: $ " + (totalCash-100).toFixed(2));
   } else {
