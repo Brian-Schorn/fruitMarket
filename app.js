@@ -24,7 +24,7 @@ var fruitArray = [apple, orange, banana, grape];
 //When Document Loads
 $(function () {
   //Changes the current price every 15 seconds
-  setTimeout(endGame, 300000);
+  setTimeout(endGame, 301000);
   setInterval(changePriceAll, 15000);
   setInterval(updateTimer, 1000);
 
@@ -106,7 +106,7 @@ function priceFluc() {
   while (fluc.toFixed(2) == 0){
     fluc = (Math.random()-0.50);
   }
-  return fluc;
+  return Number(fluc.toFixed(2));
 }
 
 //Adds one fruit to the inventory, while deducting the cost from totalCash. Also adds to totalPurchased and totalSpent
